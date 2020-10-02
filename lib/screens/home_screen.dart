@@ -10,8 +10,11 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("おくすりアラート")
-      )
+        title: Text("おくすりアラート"),
+        centerTitle: true,
+      ),
+      drawer: Drawer(),
+      floatingActionButton: FloatingActionButton(),
     );
   }
 }
