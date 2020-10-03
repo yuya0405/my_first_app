@@ -26,9 +26,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 controller: null, //TODO
               ),
               Image.asset("assets/images/セフトリアキソン.PNG", scale: 10.0,),
-              RaisedButton(
-                onPressed: null, //TODO ボタンのクリック処理
-                child: Text("飲みました！", style: TextStyle(fontSize: 18.0),)
+              SizedBox(height: 80.0),
+              SizedBox(
+                width: double.infinity,
+                child: RaisedButton(
+                  onPressed: null, //TODO ボタンのクリック処理
+                  child: Text("飲みました！", style: TextStyle(fontSize: 18.0),)
+                ),
               )
             ],
           ),
