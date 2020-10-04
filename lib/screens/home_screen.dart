@@ -6,6 +6,11 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  String _textHeader = "お薬を飲みましょう";
+  TextEditingController _textEditingController = TextEditingController();
+  Widget _imageWidget = Container();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,24 +23,36 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             children: [
               Center(
-                  child:
-                      Text("お名前", style: TextStyle(fontSize: 20.0))),
+                  child: Text("お名前", style: TextStyle(fontSize: 20.0))
+              ),
               TextField(
                 keyboardType: TextInputType.text,
                 style: TextStyle(fontSize: 20.0),
-                controller: null, //TODO
+                controller: _textEditingController
               ),
-              Image.asset("assets/images/セフトリアキソン.PNG", scale: 10.0,),
-              SizedBox(height: 80.0),
+              Center(
+                  child: Text(_textHeader, style: TextStyle(fontSize: 18.0))
+              ),
+              Expanded(child: _imageWidget),
               SizedBox(
                 width: double.infinity,
                 child: RaisedButton(
-                  onPressed: null, //TODO ボタンのクリック処理
+                  onPressed: () => _onClick(),
                   child: Text("飲みました！", style: TextStyle(fontSize: 18.0),)
                 ),
               )
             ],
           ),
         ));
+  }
+
+  void _onClick() {
+    setState(() {
+      //文字
+      var inputText = _textEditingController.text;
+      _textHeader = "$inputTextさん、次も忘れず飲みましょう！";
+      //画像
+      _imageWidget = Image.asset("assets/images/セフトリアキソン.PNG");
+    });
   }
 }
