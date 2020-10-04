@@ -6,7 +6,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   String _textHeader = "お薬を飲みましょう";
   TextEditingController _textEditingController = TextEditingController();
   Widget _imageWidget = Container();
@@ -22,25 +21,23 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: EdgeInsets.all(20.0),
           child: Column(
             children: [
-              Center(
-                  child: Text("お名前", style: TextStyle(fontSize: 20.0))
-              ),
+              Center(child: Text("お名前", style: TextStyle(fontSize: 20.0))),
               TextField(
-                keyboardType: TextInputType.text,
-                style: TextStyle(fontSize: 20.0),
-                controller: _textEditingController
-              ),
+                  keyboardType: TextInputType.text,
+                  style: TextStyle(fontSize: 20.0),
+                  controller: _textEditingController),
               SizedBox(height: 10.0),
               Center(
-                  child: Text(_textHeader, style: TextStyle(fontSize: 18.0))
-              ),
+                  child: Text(_textHeader, style: TextStyle(fontSize: 18.0))),
               Expanded(child: _imageWidget),
               SizedBox(
                 width: double.infinity,
                 child: RaisedButton(
-                  onPressed: () => _onClick(),
-                  child: Text("飲みました！", style: TextStyle(fontSize: 18.0),)
-                ),
+                    onPressed: () => _onClick(),
+                    child: Text(
+                      "飲みました！",
+                      style: TextStyle(fontSize: 18.0),
+                    )),
               )
             ],
           ),
