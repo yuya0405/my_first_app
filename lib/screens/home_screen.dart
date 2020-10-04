@@ -50,7 +50,8 @@ class _HomeScreenState extends State<HomeScreen> {
       var inputText = _textEditingController.text;
       _textHeader = "$inputTextさん、次も忘れず飲みましょう！";
       //画像
-      _imageWidget = Image.asset("assets/images/セフトリアキソン.PNG");
+      //_imageWidget = Image.asset("assets/images/セフトリアキソン.PNG");
+      _imageWidget = Image.network("https://1.bp.blogspot.com/-aZLVeZNSQ28/XfMOBGmNwrI/AAAAAAABWtk/-J7WFRrG5n8PO_mR3ONn7WvXThkphmbkwCNcBGAsYHQ/s1600/animal_penguin_music_band.png");
     });
   }
 }
