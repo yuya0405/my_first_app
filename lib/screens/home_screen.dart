@@ -30,6 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: TextStyle(fontSize: 20.0),
                 controller: _textEditingController
               ),
+              SizedBox(height: 10.0),
               Center(
                   child: Text(_textHeader, style: TextStyle(fontSize: 18.0))
               ),
